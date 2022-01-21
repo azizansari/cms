@@ -1,0 +1,8 @@
+const http = require("http");
+
+process.env.TZ = "UTC";
+const app = require("../app");
+
+http.createServer(app).listen(app.get("port"), () => {
+  console.log(`Seedify NFT minted on port ${app.get("port")}`);
+});
